@@ -218,7 +218,14 @@ def select_and_print_json_with_pcre2():
 
         # Print the processed content
         print("\nProcessed Content:\n")
-        print(processed_content)
+        # Specify the output file name
+        output_file = "output.txt"
+
+        # Open the file in write mode and write the content to it
+        with open(output_file, "w", encoding="utf-8") as file:
+            file.write(processed_content)
+
+        print(f"Content saved to {output_file}")
 
     except Exception as e:
         print(f"An error occurred while processing the file: {e}")
